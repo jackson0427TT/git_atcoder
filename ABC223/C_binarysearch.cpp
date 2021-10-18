@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-double calc_time (double d, const vector<double> &A, const vector<double> B) {
+double calc_time (double d, const vector<double> &A, const vector<double> &B) {
     double ret = 0, it = 0, now = 0;
     while (now + A[it] <= d) {
         ret += A[it] / B[it];
