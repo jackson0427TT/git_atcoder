@@ -25,7 +25,7 @@ ll f(ll X, int it, const vector<ll>& A) {
     if (memo.count({X, it})) return memo[{X, it}];
 
     ll base = A[it + 1] / A[it], rest = X % base;
-    ll ret = min(f(X / base, it + 1, A) + rest, f((X + base - 1LL) / base, it + 1, A) + (base - rest));
+    ll ret = min(f(X / base, it + 1, A) + rest, f(X / base + 1LL, it + 1, A) + (base - rest));
     //メモ部.
     memo[{X, it}] = ret;
     return ret;
