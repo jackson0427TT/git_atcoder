@@ -38,7 +38,7 @@ int main() {
 
     //BITでBの値を管理しながら探索.
     ll ans = 0, it = 0;
-    fenwick_tree<int> fen(N + 1);
+    fenwick_tree<ll> fen(N + 1);
     /*
     ループ内の機能.
     1: gift[i].first以下のgift[j].first全てをBITに追加.
@@ -50,7 +50,6 @@ int main() {
             //gift[it]の要素をBITに加算.
             int b = gift[it].se + N;
             fen.add(b, 1);
-
             ++it;
         }
 
